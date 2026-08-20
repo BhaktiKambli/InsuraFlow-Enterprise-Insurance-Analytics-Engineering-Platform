@@ -27,21 +27,6 @@ This baseline establishes the repository layout, local PostgreSQL service, Airfl
 
 Airflow is available at `http://localhost:8080`. PostgreSQL connects on `localhost:${POSTGRES_PORT}` using values from `.env`.
 
-## Repository layout
+## Architecture
 
-```text
-airflow/       Airflow DAGs and runtime logs
-config/        Environment-neutral application settings
-data/          Git-ignored generated and processed data
-dbt/           dbt project (added in a later step)
-docker/        Container build definitions
-docs/          Architecture and operational documentation
-models/        Shared Python domain and data models
-postgres/      Database initialization and migration SQL
-scripts/       Executable local utilities
-tests/         Automated tests
-```
-
-## Safety
-
-Never commit `.env`, generated datasets, credentials, or container volumes. Use `.env.example` as the shareable configuration contract.
+![InsuraFlow Architecture](docs/insuraflow_architecture.png)
