@@ -1,0 +1,17 @@
+project:
+  name: insuraflow
+  environment: ${INSURAFLOW_ENV:-local}
+
+storage:
+  raw_format: parquet
+  raw_path: data/raw
+  processed_path: data/processed
+
+database:
+  host: ${POSTGRES_HOST:-localhost}
+  port: ${POSTGRES_PORT:-5432}
+  name: ${POSTGRES_DB}
+  user: ${POSTGRES_USER}
+
+azure:
+  container: ${AZURE_STORAGE_CONTAINER}

@@ -1,0 +1,39 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment and secrets
+.env
+
+# Tooling
+.idea/
+.vscode/
+.DS_Store
+
+# Runtime data and logs
+
+# Airflow local runtime files
+airflow/*.db
+airflow/*.pid
+airflow/logs/
+airflow/plugins/
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# dbt artifacts
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# Logs
+**/logs/
+*.log
+airflow/standalone_admin_password.txt
+airflow/airflow.cfg
+airflow/standalone_admin_password.txt
